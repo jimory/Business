@@ -1,0 +1,21 @@
+package com.etc.bussiness.biz;
+
+import java.util.List;
+
+import com.etc.bussiness.entity.Comment;
+
+public interface CommentBiz {
+	
+	public int add(Comment comment);
+	
+	List<Comment> searchCommentAll(int pageNum, int pageSize, String keyword);
+	
+	int commentCount(int pageSize, String keyword);
+	
+	int delete(int id);
+	
+	Comment getDetail(int id);
+	
+	List<Comment> searchByBlogId(int pageNum, int pageSize,int id);
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="message" extends="struts-default">
+		<action name="mg_*" class="com.etc.bussiness.action.MessageAction" method="{1}">
+			<result name="addOk">/contact.jsp?addmeg=1</result>
+			<result name="listAll">/back/showMessage.jsp</result>
+			<result name="listSome">/back/showMessage.jsp</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">5</param>
+		</action>
+	</package>
+</struts>    

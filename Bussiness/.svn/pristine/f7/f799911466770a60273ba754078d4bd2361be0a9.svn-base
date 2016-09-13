@@ -1,0 +1,241 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Businex Website Template | Contact </title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		
+		  <script src="js/jquery.min.js"></script>
+		    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!----start-wrap---->
+		<div class="wrap">
+			<!---start-header---->
+			<div class="top-links" id="top">
+					
+				</div>
+			</div>
+			<div class="header">
+				<div class="wrap">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<div class="top-nav">
+					<ul>
+						<li><a href="index.html">Ê×Ò³</a></li>
+						<li><a href="about.html">¹ØÓÚÎÒÃÇ</a></li>
+						<li><a href="services.html">ÐÂÎÅ</a></li>
+						<li><a href="portfolio.html">³ÉÔ±</a></li>
+						<li><a href="blog.html">²©¿Í</a></li>
+						<li class="active"><a href="contact.html">ÁªÏµÎÒÃÇ</a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---End-header---->
+		</div>
+		 <!---start-content---->
+		 <div class="content">
+		 	<!----start-contact---->
+		 	<div class="contact">
+		 		<div class="wrap">
+				<div class="section group">				
+				<div class="col span_1_of_3">
+					<div class="contact_info">
+			    	 	<h3>Find Us Here</h3>
+			    	 		<div class="map">
+					   			<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br>
+                                
+                                <div id="dituContent" style="height: 240px;">
+                                                </div>
+                                
+                                
+                                <small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#666;text-align:left;font-size:12px">View Larger Map</a></small>
+					   		</div>
+      				</div>
+      			<div class="company_address">
+				     	<h3>Company Information :</h3>
+						    	<p>500 Lorem Ipsum Dolor Sit,</p>
+						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
+						   		<p>USA</p>
+				   		<p>Phone:(00) 222 666 444</p>
+				   		<p>Fax: (000) 000 00 00 0</p>
+				 	 	<p>Email: <span>info@mycompany.com</span></p>
+				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+				   </div>
+				</div>				
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  	<h3>Contact Us</h3>
+					    <form method="post" action="contact-post.html">
+					    	<div>
+						    	<span><label>NAME</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-MAIL</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>MOBILE</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>SUBJECT</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" value="Submit"></span>
+						  </div>
+					    </form>
+
+				    </div>
+  				</div>				
+			  </div>
+			</div>
+			</div>
+		 	<!----End-contact---->
+		 	</div>
+		 	<div class="clear"> </div>
+		 <!---End-content----><br /><br />
+		 <!---start-copy-right----->
+		 <div class="copy-right">
+				<div class="top-to-page">
+						<a href="#top" class="scroll"> </a>
+						<div class="clear"> </div>
+					</div>
+					<p>Design by Businex</p>
+			</div>
+		 <!---End-copy-right---->
+		<!----End-wrap---->
+	</div>
+    
+    
+      <script type="text/javascript">
+    //´´½¨ºÍ³õÊ¼»¯µØÍ¼º¯Êý£º
+    function initMap(){
+        createMap();//´´½¨µØÍ¼
+        setMapEvent();//ÉèÖÃµØÍ¼ÊÂ¼þ
+        addMapControl();//ÏòµØÍ¼Ìí¼Ó¿Ø¼þ
+        addMarker();//ÏòµØÍ¼ÖÐÌí¼Ómarker
+        addPolyline();//ÏòµØÍ¼ÖÐÌí¼ÓÏß
+    }
+    
+    //´´½¨µØÍ¼º¯Êý£º
+    function createMap(){
+        var map = new BMap.Map("dituContent");//ÔÚ°Ù¶ÈµØÍ¼ÈÝÆ÷ÖÐ´´½¨Ò»¸öµØÍ¼
+        var point = new BMap.Point(117.120603,39.071679);//¶¨ÒåÒ»¸öÖÐÐÄµã×ø±ê
+        map.centerAndZoom(point,15);//Éè¶¨µØÍ¼µÄÖÐÐÄµãºÍ×ø±ê²¢½«µØÍ¼ÏÔÊ¾ÔÚµØÍ¼ÈÝÆ÷ÖÐ
+        window.map = map;//½«map±äÁ¿´æ´¢ÔÚÈ«¾Ö
+    }
+    
+    //µØÍ¼ÊÂ¼þÉèÖÃº¯Êý£º
+    function setMapEvent(){
+        map.enableDragging();//ÆôÓÃµØÍ¼ÍÏ×§ÊÂ¼þ£¬Ä¬ÈÏÆôÓÃ(¿É²»Ð´)
+        map.enableScrollWheelZoom();//ÆôÓÃµØÍ¼¹öÂÖ·Å´óËõÐ¡
+        map.enableDoubleClickZoom();//ÆôÓÃÊó±êË«»÷·Å´ó£¬Ä¬ÈÏÆôÓÃ(¿É²»Ð´)
+        map.enableKeyboard();//ÆôÓÃ¼üÅÌÉÏÏÂ×óÓÒ¼üÒÆ¶¯µØÍ¼
+    }
+    
+    //µØÍ¼¿Ø¼þÌí¼Óº¯Êý£º
+    function addMapControl(){
+        //ÏòµØÍ¼ÖÐÌí¼ÓËõ·Å¿Ø¼þ
+    var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_ZOOM});
+    map.addControl(ctrl_nav);
+        //ÏòµØÍ¼ÖÐÌí¼ÓËõÂÔÍ¼¿Ø¼þ
+    var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+    map.addControl(ctrl_ove);
+        //ÏòµØÍ¼ÖÐÌí¼Ó±ÈÀý³ß¿Ø¼þ
+    var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+    map.addControl(ctrl_sca);
+    }
+    
+    //±ê×¢µãÊý×é
+    var markerArr = [{title:"WEGOTEAM",content:"Ìì½òÊÐ&nbsp;Î÷ÇàÇø&nbsp;±öË®Î÷µÀÑÓ³ÙÏß&nbsp;339ºÅ&nbsp;Ìì½ò¹¤Òµ´óÑ§",point:"117.122903|39.070409",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+         ];
+    //´´½¨marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+            var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+            var iw = createInfoWindow(i);
+            var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+            marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+            
+            (function(){
+                var index = i;
+                var _iw = createInfoWindow(i);
+                var _marker = marker;
+                _marker.addEventListener("click",function(){
+                    this.openInfoWindow(_iw);
+                });
+                _iw.addEventListener("open",function(){
+                    _marker.getLabel().hide();
+                })
+                _iw.addEventListener("close",function(){
+                    _marker.getLabel().show();
+                })
+                label.addEventListener("click",function(){
+                    _marker.openInfoWindow(_iw);
+                })
+                if(!!json.isOpen){
+                    label.hide();
+                    _marker.openInfoWindow(_iw);
+                }
+            })()
+        }
+    }
+    //´´½¨InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //´´½¨Ò»¸öIcon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+//±ê×¢ÏßÊý×é
+    var plPoints = [{style:"solid",weight:4,color:"#f00",opacity:0.8,points:["117.118734|39.078673","117.121563|39.078673","117.121663|39.070299","117.122903|39.070299"]}
+         ];
+    //ÏòµØÍ¼ÖÐÌí¼ÓÏßº¯Êý
+    function addPolyline(){
+        for(var i=0;i<plPoints.length;i++){
+            var json = plPoints[i];
+            var points = [];
+            for(var j=0;j<json.points.length;j++){
+                var p1 = json.points[j].split("|")[0];
+                var p2 = json.points[j].split("|")[1];
+                points.push(new BMap.Point(p1,p2));
+            }
+            var line = new BMap.Polyline(points,{strokeStyle:json.style,strokeWeight:json.weight,strokeColor:json.color,strokeOpacity:json.opacity});
+            map.addOverlay(line);
+        }
+    }
+    
+    initMap();//´´½¨ºÍ³õÊ¼»¯µØÍ¼
+</script>
+
+	</body>
+</html>
+

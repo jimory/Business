@@ -1,0 +1,25 @@
+package com.etc.bussiness.biz.impl;
+
+import java.util.List;
+
+import com.etc.bussiness.biz.UserBiz;
+import com.etc.bussiness.dao.UserDao;
+import com.etc.bussiness.entity.User;
+
+public class UserBizImpl implements UserBiz {
+	
+	UserDao userDao;
+	
+	
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
+
+	public void add(User user) {
+		userDao.add(user);
+		
+	}
+
+
+}

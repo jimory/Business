@@ -1,0 +1,55 @@
+package com.etc.bussiness.action;
+
+import java.util.Date;
+
+import com.etc.bussiness.biz.CommentBiz;
+import com.etc.bussiness.entity.Comment;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+public class CommentAction extends ActionSupport implements ModelDriven<Comment> {
+	
+	private Comment comment = new Comment();
+	CommentBiz commentBiz;
+	
+	
+	public void setCommentBiz(CommentBiz commentBiz) {
+		this.commentBiz = commentBiz;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public String add(){
+		comment.setCmtime(new Date());
+		commentBiz.add(comment);
+		return "success";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public Comment getModel() {
+		// TODO Auto-generated method stub
+		return comment;
+	}
+
+}

@@ -1,0 +1,131 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Businex Website Template | Blog </title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		
+		  <script src="js/jquery.min.js"></script>
+		    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!----start-wrap---->
+		<div class="wrap">
+			<!---start-header---->
+			<div class="top-links" id="top">
+					
+				</div>
+			</div>
+			<div class="header">
+				<div class="wrap">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<div class="top-nav">
+					<ul>
+						<li><a href="index.html">Ê×Ò³</a></li>
+						<li><a href="about.html">¹ØÓÚÎÒÃÇ</a></li>
+						<li class="active"><a href="services.html">ÐÂÎÅ</a></li>
+						<li><a href="portfolio.html">³ÉÔ±</a></li>
+						<li><a href="blog.html">²©¿Í</a></li>
+						<li><a href="contact.html">ÁªÏµÎÒÃÇ</a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---End-header---->
+		</div>
+		 <!---start-content---->
+		 <div class="content">
+		 	<!---start-blog-page---->
+		 	<div class="blog">
+		 		<div class="wrap">
+		 		<h4>News</h4>
+		 		<div class="single-page-artical">
+								<div class="artical-content">
+									<h3>Lorem Ipsum is simply dummy text</h3>
+									<img src="images/icon1.png" width="1800" height="400" title="banner1">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								    </div>
+								    
+		  						 <div class="share-artical">
+		  						 	<h3> Also share on</h3>
+		  						 	<ul>
+		  						 		<li><a href="#"><img src="images/facebook.png" title="facebook">Facebook</a></li>
+		  						 		<li><a href="#"><img src="images/twiter.png" title="Twitter">Twiiter</a></li>
+		  						 		<li><a href="#"><img src="images/in.png" title="linked-in">Linked-in</a></li>
+		  						 		<li><a href="#"><img src="images/google+.png" title="google+">Google+</a></li>
+		  						 		<li><a href="#"><img src="images/pintrest.png" title="pintrest">Pintrest</a></li>
+		  						 		<li><a href="#"><img src="images/rss.png" title="rss">Rss</a></li>
+		  						 	</ul>
+		  						 </div>
+		  						 <div class="artical-commentbox">
+		  						 	<h3>othsers about this type</h3>
+		  						 	<div class="services-grids">
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						<div class="services-grid">
+							<a href="services_single.html">consectetur adiing</a>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Fusce suscipit varius mi.</p>
+						</div>
+						 <div class="clear"> </div>
+					</div>
+		  						 </div>
+							</div>
+					</div>
+				
+		 	</div>
+		 	<!---End-blog-page---->
+		 	</div>
+		 	<div class="clear"> </div>
+		 <!---End-content----><br /><br />
+		 <!---start-copy-right----->
+		 <div class="copy-right">
+				<div class="top-to-page">
+						<a href="#top" class="scroll"> </a>
+						<div class="clear"> </div>
+					</div>
+					<p>Design by Businex</p>
+			</div>
+		 <!---End-copy-right---->
+		<!----End-wrap---->
+	</div>
+	</body>
+</html>
+

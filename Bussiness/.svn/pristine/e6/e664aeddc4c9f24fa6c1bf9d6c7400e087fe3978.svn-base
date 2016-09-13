@@ -1,0 +1,12 @@
+package com.etc.bussiness.biz;
+
+import com.etc.bussiness.entity.User;
+
+public interface UserBiz {
+	
+	public int addUser(User user);
+	public User getUserByNapa(String uname,String upassword);
+	
+	
+
+}

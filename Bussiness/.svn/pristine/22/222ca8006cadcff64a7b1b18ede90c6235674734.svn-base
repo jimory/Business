@@ -1,0 +1,60 @@
+package com.etc.bussiness.action;
+
+import javax.annotation.Resource;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Controller;
+
+import com.etc.bussiness.biz.UserBiz;
+import com.etc.bussiness.entity.User;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+@Scope("prototype")
+@Controller
+public class UserAction extends ActionSupport implements ModelDriven<User>{
+	
+	//ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+	//UserBiz userBiz = (UserBiz) ac.getBean("userBiz");
+	@Resource
+	private UserBiz userBiz;
+
+	private User user = new User();
+	
+	//µÇÂ¼
+	public String doLogin(){
+		System.out.println(user.getUname());
+		User loginedUser = userBiz.getUserByNapa(user.getUname(), user.getUpassword());
+		if (loginedUser != null) {
+			ActionContext.getContext().getSession().put("loginedUser", loginedUser);
+			return "success";
+		}
+			return "login";
+		
+	}
+	//×¢²á
+    public String doSign(){
+    	User signUser = userBiz.getUserByNapa(user.getUname(), user.getUpassword());
+    	if(signUser != null){
+    		return "sign";
+    	}
+    	return "add";
+    }
+    public String doAddUser(){
+    	userBiz.addUser(user);
+    	return "addOk";
+    }
+    
+    
+	@Override
+	public User getModel() {
+		return user;
+	}
+
+
+	
+
+}

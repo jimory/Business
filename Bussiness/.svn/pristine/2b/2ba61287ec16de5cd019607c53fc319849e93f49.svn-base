@@ -1,0 +1,177 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Businex Website Template | About </title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		
+		  <script src="js/jquery.min.js"></script>
+		    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!----start-wrap---->
+		<div class="wrap">
+			<!---start-header---->
+			<div class="top-links" id="top">
+					
+				</div>
+			</div>
+			<div class="header">
+				<div class="wrap">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<div class="top-nav">
+					<ul>
+						<li><a href="index.html">Ê×Ò³</a></li>
+						<li class="active"><a href="about.html">¹ØÓÚÎÒÃÇ</a></li>
+						<li><a href="services.html">ÐÂÎÅ</a></li>
+						<li><a href="portfolio.html">³ÉÔ±</a></li>
+						<li><a href="blog.html">²©¿Í</a></li>
+						<li><a href="contact.html">ÁªÏµÎÒÃÇ</a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---End-header---->
+		</div>
+		 <!---start-content---->
+		 <div class="content">
+			<!---start-about---->
+			<div class="about">
+				<div class="wrap">
+					<div class="about-left">
+						<h2>ºÃº¢×Ó</h2>
+						<span>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</span>
+						<p>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó,ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</p>
+						<div class="about-histore">
+									<h3>Our History</h3>
+									<div class="historey-lines">
+										<ul>
+											<li><span>2010</span></li>
+											<li><p><label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒ£¬ÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó.</p></li>
+											<div class="clear"> </div>
+										</ul>
+									</div>
+									<div class="historey-lines">
+										<ul>
+											<li><span>2010</span></li>
+											<li><p><label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</p></li>
+											<div class="clear"> </div>
+										</ul>
+									</div>
+									<div class="historey-lines">
+										<ul>
+											<li><span>2010</span></li>
+											<li><p><label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</p></li>
+											<div class="clear"> </div>
+										</ul>
+									</div>
+									<div class="historey-lines">
+										<ul>
+											<li><span>2010</span></li>
+											<li><p><label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</p></li>
+											<div class="clear"> </div>
+										</ul>
+									</div>
+									<div class="historey-lines">
+										<ul>
+											<li><span>2010</span></li>
+											<li><p><label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</label>ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×Ó£¬ÎÒÃÇ¶¼ÊÇºÃº¢×ÓÎÒÃÇ¶¼ÊÇºÃº¢×Ó</p></li>
+											<div class="clear"> </div>
+										</ul>
+									</div>
+									<div class="clear"> </div>
+								</div>
+					</div>	
+					<div class="about-right">
+						<div class="about-sidebar">
+							<h3>WE PROVIDE</h3>
+							 <ul>
+							  	<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+							  	<li><a href="#">Conse ctetur adipisicing</a></li>
+							  	<li><a href="#">Elit sed do eiusmod tempor</a></li>
+							  	<li><a href="#">Incididunt ut labore</a></li>
+							  	<li><a href="#">Et dolore magna aliqua</a></li>
+							  	<li><a href="#">Ut enim ad minim veniam</a></li>
+					 		 </ul>
+					 		 <h3>ARCHIVES</h3>
+					 		 <ul>
+					 		 	<li><a href="#">JAN, 2013</a></li>
+					 		 	<li><a href="#">FEB, 2013</a></li>
+					 		 	<li><a href="#">MAR, 2013</a></li>
+					 		 	<li><a href="#">APRIL, 2013</a></li>
+					 		 </ul>
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+			<!---End-about---->		 	
+		 	<!---start-articals------>
+		 	<div class="p-sections">
+		 		<div class="wrap">
+			 		<h3>Popular Sections</h3>
+			 		<ul>
+			 			<li><a href="#">consectetur</a></li>
+			 			<li><a href="#">adipisicing</a></li>
+			 			<li><a href="#">elit, sed do </a></li>
+			 			<li><a href="#">eiusmod tempor</a></li>
+			 			<li><a href="#">consectetur</a></li>
+			 		</ul>
+			 		<ul>
+			 			<li><a href="#">consectetur</a></li>
+			 			<li><a href="#">adipisicing</a></li>
+			 			<li><a href="#">elit, sed do </a></li>
+			 			<li><a href="#">eiusmod tempor</a></li>
+			 			<li><a href="#">consectetur</a></li>
+			 		</ul>
+			 		<ul>
+			 			<li><a href="#">consectetur</a></li>
+			 			<li><a href="#">adipisicing</a></li>
+			 			<li><a href="#">elit, sed do </a></li>
+			 			<li><a href="#">eiusmod tempor</a></li>
+			 			<li><a href="#">consectetur</a></li>
+			 		</ul>
+			 		<ul>
+			 			<li><a href="#">consectetur</a></li>
+			 			<li><a href="#">adipisicing</a></li>
+			 			<li><a href="#">elit, sed do </a></li>
+			 			<li><a href="#">eiusmod tempor</a></li>
+			 			<li><a href="#">consectetur</a></li>
+			 		</ul>
+			 		<ul>
+			 			<li><a href="#">consectetur</a></li>
+			 			<li><a href="#">adipisicing</a></li>
+			 			<li><a href="#">elit, sed do </a></li>
+			 			<li><a href="#">eiusmod tempor</a></li>
+			 			<li><a href="#">consectetur</a></li>
+			 		</ul>
+			 	<div class="clear"> </div>
+		 		</div>
+		 	</div>
+		 	<!---start-articals------>
+		 </div>
+		 <!---End-content----><br /><br />
+		 <!---start-copy-right----->
+		 <div class="copy-right">
+				<div class="top-to-page">
+						<a href="#top" class="scroll"> </a>
+						<div class="clear"> </div>
+					</div>
+					<p>Design by Businex</p>
+			</div>
+		 <!---End-copy-right---->
+		<!----End-wrap---->
+	</div>
+	</body>
+</html>
+

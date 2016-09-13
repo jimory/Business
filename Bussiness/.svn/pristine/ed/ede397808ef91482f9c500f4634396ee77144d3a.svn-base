@@ -1,0 +1,8 @@
+package com.etc.bussiness.dao;
+
+import com.etc.bussiness.entity.Comment;
+
+public interface CommentDao {
+	public int add(Comment comment);
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="admin" extends="struts-default">
+		<action name="admin_*" class="adminAction"
+			method="{1}">
+			<result name="success">/back/backindex.jsp</result>
+			<result name="login">/backlogin.jsp</result>
+			<result name="out" type="redirect">/backlogin.jsp</result>
+			<result type="redirectAction" name="addOk">admin_doSearchAll？admsg=1</result>
+			<result name="listAll">/back/showAdmin.jsp</result>
+			<result name="listSome">/back/showAdmin.jsp</result>
+			<result name="toUpdate">/back/updateAdmin.jsp</result>
+		    <result type="redirectAction" name="updateOk">admin_doSearchAll?upmsg=1</result>
+			<result type="redirectAction" name="deleteOk">admin_doSearchAll?delmsg=1</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">5</param>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<!-- 配置开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.configuration.xml.reload" value="true"/>
+	
+	 <include file="struts-news.xml"/>
+    <include file="struts-user.xml"/>
+     <include file="struts-admin.xml"/>
+     <include file="struts-message.xml"/>
+     <include file="struts-home.xml"/>
+     <include file="struts-comment.xml"/>
+     <include file="struts-blog.xml"/>
+	
+	
+</struts>    

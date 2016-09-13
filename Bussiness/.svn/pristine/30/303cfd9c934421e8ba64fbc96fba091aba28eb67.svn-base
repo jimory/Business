@@ -1,0 +1,49 @@
+package com.etc.bussiness.biz.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+
+import com.etc.bussiness.biz.CommentBiz;
+import com.etc.bussiness.dao.CommentDao;
+import com.etc.bussiness.entity.Comment;
+
+@Component
+public class CommentBizImpl implements CommentBiz {
+	
+	@Resource
+	private CommentDao commentDao;
+
+	//添加评论
+	public int add(Comment comment) {
+		return commentDao.add(comment);
+	}
+
+	//查询所有评论
+	public List<Comment> searchCommentAll(int pageNum, int pageSize,String keyword) {
+		return commentDao.searchCommentAll(pageNum, pageSize, keyword);
+	}
+
+	//查询所有评论条数
+	public int commentCount(int pageSize, String keyword) {
+		int count = commentDao.getCommentCount(keyword);
+		if (count % pageSize == 0) {
+			return count / pageSize;
+		}
+		return count / pageSize + 1;
+	}
+
+	@Override
+	public int delete(int id) {
+		return commentDao.delete(id);
+	}
+
+	@Override
+	public Comment getDetail(int id) {
+		return commentDao.getDetail(id);
+	}
+
+
+}

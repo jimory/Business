@@ -1,0 +1,73 @@
+package com.etc.bussiness.entity;
+
+import java.io.Serializable;
+
+public class News implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer newsId;
+	private String newsTitle;
+	private String newsType;
+	private String newsDetails;
+	private String newsImage;
+	
+	
+	public News(String newsTitle, String newsType, String newsDetails,
+			String newsImage) {
+		super();
+		this.newsTitle = newsTitle;
+		this.newsType = newsType;
+		this.newsDetails = newsDetails;
+		this.newsImage = newsImage;
+	}
+	public News() {
+		super();
+	}
+	public News(Integer newsId, String newsTitle, String newsType,
+			String newsDetails, String newsImage) {
+		super();
+		this.newsId = newsId;
+		this.newsTitle = newsTitle;
+		this.newsType = newsType;
+		this.newsDetails = newsDetails;
+		this.newsImage = newsImage;
+	}
+	public Integer getNewsId() {
+		return newsId;
+	}
+	public void setNewsId(Integer newsId) {
+		this.newsId = newsId;
+	}
+	public String getNewsTitle() {
+		return newsTitle;
+	}
+	public void setNewsTitle(String newsTitle) {
+		this.newsTitle = newsTitle;
+	}
+	public String getNewsType() {
+		return newsType;
+	}
+	public void setNewsType(String newsType) {
+		this.newsType = newsType;
+	}
+	public String getNewsDetails() {
+		return newsDetails;
+	}
+	public void setNewsDetails(String newsDetails) {
+		this.newsDetails = newsDetails;
+	}
+	public String getNewsImage() {
+		return newsImage;
+	}
+	public void setNewsImage(String newsImage) {
+		this.newsImage = newsImage;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+
+}

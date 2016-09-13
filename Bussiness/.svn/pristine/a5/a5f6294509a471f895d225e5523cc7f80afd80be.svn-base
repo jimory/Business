@@ -1,0 +1,87 @@
+package com.etc.bussiness.action;
+
+import java.util.List;
+import javax.annotation.Resource;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+import com.etc.bussiness.biz.BlogBiz;
+import com.etc.bussiness.entity.Blog;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+@Controller
+@Scope("prototype")
+public class BlogAction extends ActionSupport implements ModelDriven<Blog> {
+	
+	private Blog blog = new Blog();
+	private String keyword;
+	
+	@Resource
+	private BlogBiz blogBiz;
+	
+	private int pageNum;
+	private int pageSize;
+	
+	public String list(){
+		List<Blog> blogList = blogBiz.searchByKeyword(pageNum, pageSize);
+		ActionContext.getContext().put("blogList", blogList);
+		ActionContext.getContext().put("pageCount", blogBiz.getPageCount(pageSize, keyword));
+		return "list";
+	}
+	
+	public String keyList(){
+		List<Blog> blogList = blogBiz.searchByKeyword(pageNum, pageSize, keyword);
+		ActionContext.getContext().put("blogList", blogList);
+		ActionContext.getContext().put("pageCount", blogBiz.getPageCount(pageSize, keyword));
+		return "list";
+	}
+	
+	public String detail(){
+		Blog blogDetail = blogBiz.getBlogDetail(blog.getBlogId());
+		ActionContext.getContext().getValueStack().push(blogDetail);
+		return "detail";
+	}
+	
+	public String delete(){
+		blogBiz.delete(blog.getBlogId());
+		return "tolist";
+	}
+
+	
+	/*===================setter  and  getter=================*/
+	public int getPageNum() {
+		return pageNum;
+	}
+
+	public void setPageNum(int pageNum) {
+		this.pageNum = pageNum;
+	}
+
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+
+
+	public Blog getModel() {
+		return blog;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+	
+	
+	
+	
+
+}

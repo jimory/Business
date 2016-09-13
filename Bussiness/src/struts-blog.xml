@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<package name="blog" namespace="/" extends="struts-default">
+		
+		<interceptors>
+			<interceptor name="permission" class="com.etc.bussiness.util.Permission"></interceptor>
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="permission">
+					<param name="includeMethods">dd,add</param>
+				</interceptor-ref>
+				<interceptor-ref name="fileUpload">
+            	<!--文件过滤 --> 
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg</param>
+                <!-- 文件大小, 以字节为单位 -->
+                <param name="maximumSize">1025956000</param>
+           		</interceptor-ref>
+           		<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+	
+		<action name="blog_*" class="blogAction" method="{1}">
+			<param name="pageNum">1</param>
+			<param name="pageSize">3</param>
+			<param name="savePath">upload</param>
+            <result name="list">/blog.jsp</result>
+            <result name="person">/portfolio.jsp</result>
+            <result name="byTitle">/iframperson.jsp</result>
+            <result name="login">/login.jsp</result>
+			<result name="detail">/single.jsp</result>
+			<result name="tolist" type="redirectAction">blog_list</result>
+			<result name="todetail" type="redirectAction">
+				<param name="actionName">blog_detail</param>
+				<param name="blogId">${cobid}</param>
+				<param name="admsg">${admsg}</param>
+			</result>
+			<interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	<package name="backblog" namespace="/back" extends="struts-default">
+		<action name="backblog_*" class="blogAction" method="{1}">
+			<result name="list">/back/BlogList.jsp</result>
+			<result name="detail">/back/blogDetail.jsp</result>
+			<result name="tolist" type="redirectAction">backblog_list?delmsg=1</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">3</param>
+		</action>
+	</package>
+
+</struts>    

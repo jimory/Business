@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html, body {
+	height:100%;
+	margin:0px;
+	font-size:12px;
+	overflow:hidden;
+}
+
+#tab {
+	width:200px;
+}
+#tab ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+	margin-left:10px;
+}
+#tab div {
+	float:left;
+	margin-right:15px;
+	padding:0 5px;
+	line-height:1.5em;
+	background:#9CF;
+	border:#000 solid 1px;
+	font-size:12px;
+	position:relative;
+	top:1px;
+}
+#tab .selectedLi {
+	background:#0973C7;
+	border-bottom-color:#cff;
+}
+#tab .selectedDiv {
+	display:block;
+}
+
+<!-- 
+
+.content{/*css目的：设置内容板块的基本样式*/ 
+border-left:1px solid #bec2cd;/*添加左边框*/ 
+border-right:1px solid #bec2cd;/*添加右边框*/ 
+border-bottom:1px solid #bec2cd;/*添加下边框*/
+padding:0;/*内容距离边界空隙*/
+margin:0;
+height:415px;
+overflow-y:auto;
+overflow-x:hidden;
+}
+
+.contentlimit{/*css目的：设置内容板块的基本样式*/ 
+border-left:1px solid #bec2cd;/*添加左边框*/ 
+border-right:1px solid #bec2cd;/*添加右边框*/ 
+border-bottom:1px solid #bec2cd;/*添加下边框*/
+padding:0;/*内容距离边界空隙*/
+margin:0;
+height:570px;
+overflow-y:auto;
+overflow-x:hidden;
+}
+
+ul#tabul {/*css目的：设置无序列表的基本样式*/
+	list-style:none;/*去除无序列表前面的点*/
+	margin:0px;
+	padding-left:5px;/*列表元素距离左边的空隙*/
+	padding-bottom:28px;/*列表元素距下边界的空隙*/
+	font: Arial, Helvetica, sans-serif;/*定义字体*/
+	border-bottom:solid 1px #bec2cd;
+	
+}
+ul#tabul li {/*css目的：设置列表横排及基本的样式定义*/
+	float:left;/*设置列表向左浮动*/
+	height:27px;
+	margin:0px 4px 0px 0px;
+	background-image:url(../images/bg02.jpg);
+	background-repeat:repeat-x;	
+	border:solid 1px #bec2cd;
+	border-bottom:none;
+	
+	
+}
+ul#tabul a:link, ul#tabul a:visited {/*设置链接以及访问过的样式*/
+	display:block;/*设置列表元素块状显示*/
+	color:#000;
+	text-decoration:none;/*去掉下划线*/
+	padding:5px 10px 3px 10px;
+	
+}
+
+#news{
+	margin:5px;
+	/*border:solid 1px #bec2cd;*/
+	width:98%;
+	padding-top:2px;
+	overflow:hidden;
+}
+
+.anniu08{ margin-left:10px; margin-right:10px; height:29px; text-align:center; line-height:29px; font-weight:bold; color:#000; cursor:pointer;}
+#news li.news, #yule li.yule, #music li.music, #movie li.movie, #download li.download {/*重定义列表菜单*/
+	
+	background-image:url(../images/footbg01.jpg);
+	background-repeat:repeat-x;
+	height:28px;
+	line-height:28px;
+	
+	
+}
+/*以下css代码为激活时菜单的超链接效果 
+************************************************************************* 
+****************/ 
+#news li.news a:link,#news li.news a:visited, 
+#yule li.yule a:link,#yule li.yule,a:visited, 
+#music li.music a:link,#music li.music a:visited, 
+#movie li.movie a:link,#movie li.movie a:visited, 
+#download li.download a:link,#download li.download a:visited{ 
+color:#fff; 
+
+} 
+
+
+--> 
+
+
+
+/*二级菜单class*/
+
+.lib_Menubox {height:27px;line-height:27px;position:relative; width:100%; background-image:url(../images/bg02-2.jpg); background-repeat:repeat-x;    }
+
+.lib_Menubox ul{margin:0px;padding:0px;list-style:none; position:absolute; top:0;  left:0; margin-left:10px; height:27px;text-align:center; }
+.lib_Menubox li{float:left;display:block;cursor:pointer;width:90px;color:#000; margin-right:15px;height:27px;line-height:27px; margin-left:5px;}
+.lib_Menubox li.hover{padding:0px; /*background-image:url(../images/bg02.jpg); background-repeat:repeat-x; background-position:0 bottom;border:1px solid #bec2cd; border-bottom:none;*/ color:#000; font-weight:bold;height:27px;line-height:27px;}
+.lib_Contentbox{clear:both;margin-top:0px; overflow:hidden; padding:5px;color:#000; width:100%; border-top:1px solid #bec2cd; margin-left:auto; margin-right:auto;}
+.lib_Contentbox li{ width:300px; height:30px; line-height:30px; margin-bottom:5px; float:left; display:inline; }
+.lib_Contentbox li span{ width:100px; text-align:right; float:left; }

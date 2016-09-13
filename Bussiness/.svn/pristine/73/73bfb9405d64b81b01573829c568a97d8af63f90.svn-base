@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.etc.bussiness.entity.Blog" table="blog">
+		<id name="blogId" type="java.lang.Integer">
+			<column name="bid"/>
+			<generator class="native"/>
+		</id>
+		<property name="blogTitle" type="java.lang.String">
+			<column name="btitle"/>
+		</property>
+		<property name="blogText" type="java.lang.String">
+			<column name="btext"/>
+		</property>
+		<property name="blogImage" type="java.lang.String">
+			<column name="bimage"/>
+		</property>
+		<property name="blogTime">
+			<column name="btime"/>
+		</property>
+		<many-to-one name="user" lazy="false" class="com.etc.bussiness.entity.User">
+			<column name="buid"></column>
+		</many-to-one>
+		<set name="comments" inverse="true" cascade="all">
+			<key>
+				<column name="cmbid"></column>
+			</key>
+			<one-to-many class="com.etc.bussiness.entity.Comment"/>
+		</set>
+			
+	</class>
+
+</hibernate-mapping>

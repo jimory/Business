@@ -1,0 +1,29 @@
+package com.etc.bussiness.dao.impl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.etc.bussiness.dao.BlogDao;
+import com.etc.bussiness.entity.Blog;
+
+public class BlogDaoImpl extends BaseDao implements BlogDao {
+
+	//分页查询博客
+	public List<Blog> searchByPageAll(int pageNum, int pageSize) {
+		return super.searchByPaging("from Blog b order by b.blogTime desc", null, pageSize, pageNum);
+	}
+	
+	public int getBlogCount(){
+		return (int) super.count("select count(*) from Blog b");
+	}
+	
+	//查询详情
+	public Blog getBlogDetail(int id){
+		return (Blog) super.get(Blog.class, id);
+	}
+
+	
+	
+
+}

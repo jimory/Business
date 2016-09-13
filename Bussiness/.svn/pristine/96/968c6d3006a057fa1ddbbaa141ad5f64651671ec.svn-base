@@ -1,0 +1,20 @@
+package com.etc.bussiness.biz.impl;
+
+import com.etc.bussiness.biz.CommentBiz;
+import com.etc.bussiness.dao.CommentDao;
+import com.etc.bussiness.entity.Comment;
+
+public class CommentBizImpl implements CommentBiz {
+	CommentDao commentDao;
+
+	public void setCommentDao(CommentDao commentDao) {
+		this.commentDao = commentDao;
+	}
+
+	//Ìí¼ÓÆÀÂÛ
+	public int add(Comment comment) {
+		return commentDao.add(comment);
+	}
+	
+
+}

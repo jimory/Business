@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="comment" namespace="/" extends="struts-default">
+	<interceptors>
+			<interceptor name="permission" class="com.etc.bussiness.util.Permission"></interceptor>
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="permission">
+					<param name="includeMethods">add</param>
+				</interceptor-ref>
+           		<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+	
+		<action name="comment1_*" class="commentAction" method="{1}">
+			<result name="detail">/back/commentDetail.jsp</result>
+			<result name="list">/back/CommentList.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="tolist" type="redirectAction">
+			   <param name="actionName">comment1_list?keyword=</param>
+			   <param name="delmsg">1</param>
+			</result>
+			<result name="toblog" type="redirectAction">blog_detail?blogId=${cmbid}</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">3</param>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+	</package>
+	
+	<package name="backcomment" namespace="/back" extends="struts-default">
+		<action name="comment_*" class="commentAction" method="{1}">
+			<result name="detail">/back/commentDetail.jsp</result>
+			<result name="list">/back/CommentList.jsp</result>
+			<result name="tolist" type="redirectAction">
+			   <param name="actionName">comment_list?keyword=</param>
+			   
+			   <param name="delmsg">1</param>
+			</result>
+			<result name="toblog" type="redirectAction">blog_detail?blogId=${cmbid}</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">3</param>
+		</action>
+	</package>
+
+</struts>    

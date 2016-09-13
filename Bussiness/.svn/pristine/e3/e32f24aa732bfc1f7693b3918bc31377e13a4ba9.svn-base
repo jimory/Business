@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="case" extends="struts-default">
+		<action name="CaseAction_*" class="caseAction" method="{1}">
+			<result name="list">/index.jsp</result>
+			<result name="toOne">/cases.jsp</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">8</param>
+		</action>
+	</package>
+	<package name="cases" extends="struts-default">
+		<action name="caseAction_*" class="caseAction" method="{1}">
+			<result type="redirectAction">CaseAction_doBackSearch</result>
+			
+			<result name="listSome">/back/showCases.jsp</result>
+			<result name="backList">/back/showCases.jsp</result>
+			<result name="edit">/back/update.jsp</result>
+			<result name="update" type="redirectAction">caseAction_doBackSearch?upmsg=1</result>
+			<result name="delete" type="redirectAction">caseAction_doBackSearch?delmsg=1</result>
+			<result name="add" type="redirectAction">caseAction_doBackSearch?addmsg=1</result>
+			<param name="pageNum">1</param>
+			<param name="pageSize">4</param>
+		</action>
+	</package>
+</struts>    

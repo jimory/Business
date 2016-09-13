@@ -1,0 +1,130 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>My JSP 'blogDetail.jsp' starting page</title>
+<link rel="stylesheet" href="styles/duihuakuang_new.css" type="text/css" />
+</head>
+  <style>
+  .t1 {
+	/* height: 32px;
+	line-height: 32px; */
+	background-color: #f9f6f2;
+}
+
+.t2 {
+	/* height: 32px;
+	line-height: 32px; */
+	background-color: #fff;
+	padding-left: 3px;
+}
+.red {
+	color: #FF0000;
+}
+ .but_01{background:url(../images/button_01.gif);width:66px;height:23px;border:none;font:14px '宋体';color:#372b1e;cursor:pointer;}
+
+ table{width:100%;border-collapse:collapse;font:14px '宋体';color:#372b1e;}
+ table .color{background-color:#fff;}
+ table tr{border:1px solid #e4d6c5;height:30px;background-color:#f9f6f2;}
+ table tr .center{text-align:center;width:45px;}
+ table tr .center .checkbox{border:none;}
+ table tr,td,th{border:1px dotted #e4d6c5;}
+ table th{text-align:left;padding-left:10px;background:url(../images/th_bj.gif);}
+ table td{padding-left:10px;}
+ table td a{font:14px '宋体';color:#372b1e;text-decoration:none;}
+ table td a:hover{font:14px '宋体';color:#d97b03;text-decoration:underline;}
+  </style>
+
+  <script>
+	function tabDiv(ident){
+		if(ident==1){
+			document.getElementById("content1").style.display='';
+			document.getElementById("content2").style.display='none';
+			document.getElementById("tab1").className = 'news';
+			document.getElementById("tab2").className = 'music3';
+		}else{
+			document.getElementById("content1").style.display='none';
+			document.getElementById("content2").style.display='';
+			document.getElementById("tab1").className = 'music3';
+			document.getElementById("tab2").className = 'news';
+			
+		}
+	}
+  </script>
+<body>
+<div id="news" style="float: right">
+		<!--无序列导航列表开始-->
+		<ul id="tabul">
+			<li id="tab1" class="news"><a class="anniu08" onclick="javascript:tabDiv(1)">属性</a></li>
+			<li id="tab2" class="music3"><a class="anniu08" onclick="javascript:tabDiv(2)">内容</a></li>
+		</ul>
+		<div>
+			
+			
+			<!--无序列内容列表开始-->
+			<div id="content1" class="content" >
+				<div id="con_one_119"></div>
+				<div class="wrap">
+					<div id="pageContent" class=""><br/>
+						 <table id='ENTITY_FILEENTITY_tab' cellpadding="0" cellspacing="1" border="0" style="width: 99%; background-color:#bec2cd;" >
+								<tr height='23px'>
+									<td class='t1' width='15%' align='right'>标题：</td>
+									<td class='t2' width='35%'  align='left'>${blogTitle }</td>
+									<td class='t1' width='15%' align='right'>作者：</td>
+									<td class='t2' width='35%'  align='left'>${user.uname }</td></tr>
+								<tr height='23px'><td class='t1' width='15%' align='right'>类型：</td>
+									<td class='t2' width='35%'  align='left'>doc</td>
+									<td class='t1' width='15%' align='right'>时间：</td>
+									<td class='t2' width='35%'  align='left'>${blogTime }</td>
+								</tr>
+								<tr height='23px'>
+									<td class='t1' width='15%' align='right'>评论数：</td>
+									<td class='t2' width='35%'  align='left'></td>
+									<td class='t1' width='15%' align='right'>收藏量：</td>
+									<td class='t2' width='35%'  align='left'></td></tr>
+								<tr height='23px'>
+									<td class='t1' width='15%' align='right'>博客号：</td>
+									<td class='t2' width='35%'  align='left'></td>
+									<td class='t1' width='15%' align='right'>大小：</td>
+									<td class='t2' width='35%'  align='left'></td>
+								</tr>
+								<tr height='23px'>
+									<td class='t1' width='15%' align='right' >备注：</td>
+									<td class='t2' width='85%'  align='left' colspan='3'></td>
+								</tr>
+						 </table>
+					</div>
+				</div>
+			</div>
+			
+			<div id="content2" class="content" style="display: none;">
+				<div id="con_one_119"></div>
+				<div class="wrap">
+					<div id="pageContent" class="">
+						<table>
+							<tr>
+								<td>${blogText }</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		</br>
+		<div class="anniu_kuang">
+			<form id="baocunForm">
+				<input type="hidden" id="tempJson_post" name="myJson" />
+			</form>
+		</div>
+			<span align="right"><input type="button" onclick="javascript:win_cl();" value="关闭" class="but_01" style="background-color:Transparent;" onmouseover="this.style.backgroundImage='url(images/button_02.gif)'" onmouseout="this.style.backgroundImage='url(images/button_01.gif)'"/></span>
+		
+		
+</body>
+<script>
+	function win_cl(){
+		window.close();
+	}
+</script>
+
+</html>

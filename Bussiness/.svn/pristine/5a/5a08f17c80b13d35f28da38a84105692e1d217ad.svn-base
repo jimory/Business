@@ -1,0 +1,12 @@
+package com.etc.bussiness.biz;
+
+import java.util.List;
+
+import com.etc.bussiness.entity.Blog;
+
+public interface BlogBiz {
+	List<Blog> searchByPageAll(int pageNum, int pageSize);
+	int getPageCount(int pageSize);
+	Blog getBlogDetail(int id);
+
+}

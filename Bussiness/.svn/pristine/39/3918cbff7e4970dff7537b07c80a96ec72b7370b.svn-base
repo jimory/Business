@@ -1,0 +1,16 @@
+package com.etc.bussiness.dao.impl;
+
+import com.etc.bussiness.dao.UserDao;
+import com.etc.bussiness.entity.User;
+
+public class UserDaoImpl extends BaseDao implements UserDao {
+
+	@Override
+	public void add(User user) {
+		super.add(user);
+		
+	}
+
+	
+	
+}

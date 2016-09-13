@@ -1,0 +1,23 @@
+package com.etc.bussiness.dao.impl;
+
+import javax.annotation.Resource;
+
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.etc.bussiness.dao.CommentDao;
+import com.etc.bussiness.entity.Comment;
+
+@Component
+public class CommentDaoImpl extends BaseDao implements CommentDao {
+
+	//Ìí¼ÓÆÀÂÛ
+	public int add(Comment comment) {
+		super.add(comment);
+		return 1;
+	}
+	
+	
+
+}

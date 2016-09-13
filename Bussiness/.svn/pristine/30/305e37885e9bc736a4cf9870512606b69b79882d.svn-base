@@ -1,0 +1,38 @@
+package com.etc.bussiness.biz.impl;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.etc.bussiness.biz.UserBiz;
+import com.etc.bussiness.dao.UserDao;
+import com.etc.bussiness.dao.impl.UserDaoImpl;
+import com.etc.bussiness.entity.User;
+
+@Service
+public class UserBizImpl implements UserBiz {
+	
+	@Resource
+	private UserDao userDao;
+
+
+
+	@Override
+	public int addUser(User user) {
+		
+		return userDao.addUser(user);
+	}
+
+
+	@Override
+	public User getUserByNapa(String uname, String upassword) {
+		User user = userDao.getUserByNapa(uname);
+		if (user != null) {
+			if (user.getUpassword().equals(upassword)) {
+				return user;
+			}
+		}
+		return null;
+	}
+
+}

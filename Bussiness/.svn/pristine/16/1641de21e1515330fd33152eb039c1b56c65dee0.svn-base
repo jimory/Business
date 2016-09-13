@@ -1,0 +1,9 @@
+package com.etc.bussiness.dao;
+
+import com.etc.bussiness.entity.User;
+
+public interface UserDao {
+	public int addUser(User user);
+	public User getUserByNapa(String uname);
+
+}

@@ -1,0 +1,56 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="o"%>
+<div align="center" style="width:1200px">
+	<table  border="1"  align="center" bgcolor="#FFFFFF" bordercolor="#00356A">
+		<caption style="font-size:23px;" height="30">"Businex"网站——留言列表</caption>
+		<tr>
+			<td height="32" colspan="6">
+				<form action="mg_doSearchSome" method="post" name="f1">
+					按留言内容查询：<input type="text" name="keyword" /> <input type="submit"
+						name="sub" value="查找" />
+				</form>
+			</td>
+		</tr>
+		<tr bgcolor="#99CCCC"  height="23">
+			<td width="30">编号</td>
+			<td width="50">留言人</td>
+			<td width="100">邮箱</td>
+			<td width="10">电话</td>
+			<td width="100">留言内容</td>
+			<td width="100">留言时间</td>
+		</tr>
+		<s:iterator value="#mgList">
+			<tr>
+				<td><s:property value="mid"/></td>
+				<td><s:property value="mname"/></td>
+				<td><s:property value="memail"/></td>
+				<td><s:property value="mphone"/></td>
+				<td><s:property value="mtext"/></td>
+				<td><s:property value="mtime"/></td>
+			</tr>
+		</s:iterator>
+		<td colspan="6" align="right">
+		<s:if test="pageNum>1">
+    		<a href="mg_doSearchAll.action?pageNum=1">首页</a>
+    		<a href="mg_doSearchAll.action?pageNum=<s:property value="pageNum-1"/>"><<</a>
+    		</s:if>
+    		
+    		<s:iterator begin="1" end="#pageCount" var="n">
+    			<s:if test="pageNum==#n">
+    				<span style="color:red;"><s:property/></span>
+    			</s:if>
+    			<s:else>
+    				[<a href="mg_doSearchAll.action?pageNum=<s:property/>"><s:property/></a>]
+    			</s:else>
+    			
+    		</s:iterator>
+    		<s:if test="pageNum<#pageCount">
+    			<a href="mg_doSearchAll.action?pageNum=<s:property value="pageNum+1"/>">>></a>
+    			<a href="mg_doSearchAll.action?pageNum=<s:property value="#pageCount"/>">末页</a>
+    		</s:if>
+    		
+    		 <s:property value="pageNum"/>/<s:property value="#pageCount"/></td>
+		</td>
+	</table>
+</div>

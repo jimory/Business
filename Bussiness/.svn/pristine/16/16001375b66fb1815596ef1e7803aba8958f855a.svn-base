@@ -1,0 +1,8 @@
+package com.etc.bussiness.biz;
+
+import com.etc.bussiness.entity.Comment;
+
+public interface CommentBiz {
+	public int add(Comment comment);
+
+}

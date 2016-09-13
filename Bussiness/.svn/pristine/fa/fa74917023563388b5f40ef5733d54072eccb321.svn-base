@@ -1,0 +1,9 @@
+package com.etc.bussiness.biz;
+
+import com.etc.bussiness.entity.User;
+
+public interface UserBiz {
+	
+	void add(User user);
+	
+}

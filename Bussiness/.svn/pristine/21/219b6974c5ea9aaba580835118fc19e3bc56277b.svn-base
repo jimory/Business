@@ -1,0 +1,39 @@
+package com.etc.bussiness.biz.impl;
+
+import java.util.List;
+
+import com.etc.bussiness.biz.BlogBiz;
+import com.etc.bussiness.dao.BlogDao;
+import com.etc.bussiness.entity.Blog;
+
+public class BlogBizImpl implements BlogBiz {
+	
+	BlogDao blogDao;
+
+	public void setBlogDao(BlogDao blogDao) {
+		this.blogDao = blogDao;
+	}
+
+
+		//查询博客所有信息
+		public List<Blog> searchByPageAll(int pageNum, int pageSize) {
+			return blogDao.searchByPageAll(pageNum, pageSize);
+		}
+
+
+		//分页查询
+		public int getPageCount(int pageSize) {
+			int count = blogDao.getBlogCount();
+			if (count % pageSize == 0) {
+				return count / pageSize;
+			}
+			return count / pageSize + 1;
+		}
+
+
+		//查询博客详情
+		public Blog getBlogDetail(int id) {
+			return blogDao.getBlogDetail(id);
+		}
+
+}

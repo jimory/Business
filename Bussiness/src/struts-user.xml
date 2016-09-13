@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="user" extends="struts-default">
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="success">/index.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="sign">/login.jsp</result>
+			<result name="out">/login.jsp</result>
+			<result type="redirectAction" name="add">user_doAddUser</result>
+			<result name="addOk">/login.jsp</result>
+			
+		</action>
+	</package>
+	
+	<package name="user2" extends="struts-default">
+	
+	 		<action name="do_*" class="userAction" method= "{1}">
+	 			<result name="success">/index.jsp</result>
+	 			<result name="login">/login.jsp</result>
+	 			<result name="edit" type="redirectAction">blog_person?buid=${buid}</result>
+	 			<result name="successpass" type="redirectAction">blog_person?buid=${buid}</result>
+	 		</action>
+	 		
+	 		 <action name="upload1" class="com.etc.bussiness.action.UploadAction">
+	 			<result name="success" type="redirectAction">blog_person?buid=${buid}</result>
+	 		</action> 
+	 </package>
+	 
+	 <package name="back" extends="struts-default" namespace="/back">
+	 	<action name="backdo_*" class="userAction" method="{1}">
+	 		<result name="list">/back/show_user.jsp</result>
+	 		<param name="pageNum">1</param>
+			<param name="pageSize">4</param>
+	 	</action>
+	 </package>
+
+</struts>    

@@ -1,0 +1,74 @@
+package com.etc.bussiness.dao.impl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.etc.bussiness.dao.NewsDao;
+import com.etc.bussiness.entity.Admin;
+import com.etc.bussiness.entity.News;
+
+@Service
+public class NewsDaoImpl extends BaseDao implements NewsDao {
+
+	@Override
+	public int addNews(News news) {
+		super.add(news);
+		return 1;
+	}
+
+	@Override
+	public int updateNews(News news) {
+		super.update(news);
+		return 1;
+	}
+
+	@Override
+	public int deleteNews(News news, int newsId) {
+		super.delete(News.class, newsId);
+		return 1;
+	}
+	@Override
+	public News getNewsById(int newsId) {
+		
+		return (News) super.get(News.class, newsId);
+	}
+
+	@Override
+	public List<News> getNewsByPaging(int pageNum, int pageSize) {
+		
+		return super.searchByPaging("from News n order by n.newsId desc", null, pageSize, pageNum);
+	}
+
+	@Override
+	public int getPageCount() {
+		
+		return (int) super.count("select count(n) from News n");
+	}
+
+	@Override
+	public List<News> getNewsByPaging(int pageNum, int pageSize, String keyword) {
+		String hql = "from News n where n.newsTitle like :keyword";
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("keyword", "%"+keyword+"%");
+		List<News> list = super.search(hql, params);
+		if(list!=null && list.size()>0){
+			return list;
+		}
+		return null;
+	}
+
+	@Override
+	public int getPageCount(String keyword) {
+		String hql = "select count(n) from News n where n.newsTitle like :keyword";
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("keyword", "%"+keyword+"%");
+		int list = (int) super.count(hql, params);
+		return list;
+	}
+
+	
+
+}

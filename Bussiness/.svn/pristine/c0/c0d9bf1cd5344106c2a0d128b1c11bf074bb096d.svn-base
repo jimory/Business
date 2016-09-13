@@ -1,0 +1,16 @@
+package com.etc.bussiness.dao.impl;
+
+import com.etc.bussiness.dao.CommentDao;
+import com.etc.bussiness.entity.Comment;
+
+public class CommentDaoImpl extends BaseDao implements CommentDao {
+
+	//Ìí¼ÓÆÀÂÛ
+	public int add(Comment comment) {
+		super.add(comment);
+		return 1;
+	}
+	
+	
+
+}

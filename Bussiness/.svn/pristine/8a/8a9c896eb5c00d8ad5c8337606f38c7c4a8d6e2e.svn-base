@@ -1,0 +1,27 @@
+package com.etc.bussiness.biz.impl;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.etc.bussiness.biz.CommentBiz;
+import com.etc.bussiness.dao.CommentDao;
+import com.etc.bussiness.entity.Comment;
+
+@Component
+public class CommentBizImpl implements CommentBiz {
+	
+	private CommentDao commentDao;
+	@Resource
+	public void setCommentDao(CommentDao commentDao) {
+		this.commentDao = commentDao;
+	}
+
+	//Ìí¼ÓÆÀÂÛ
+	public int add(Comment comment) {
+		return commentDao.add(comment);
+	}
+	
+
+}

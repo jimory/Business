@@ -1,0 +1,145 @@
+package com.etc.bussiness.action;
+
+import java.io.File;
+import java.util.Date;
+import java.util.List;
+import javax.annotation.Resource;
+
+import org.apache.struts2.ServletActionContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+import com.etc.bussiness.biz.BlogBiz;
+import com.etc.bussiness.biz.CommentBiz;
+import com.etc.bussiness.entity.Blog;
+import com.etc.bussiness.entity.Comment;
+import com.etc.bussiness.util.FileUtils;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+@Controller
+@Scope("prototype")
+public class BlogAction extends ActionSupport implements ModelDriven<Blog> {
+	
+	private Blog blog = new Blog();
+	private String keyword;
+	private File image;
+	private String imageContentType;
+	private String imageFileName;
+	private String savePath;
+	
+	@Resource
+	private BlogBiz blogBiz;
+	@Resource
+	private CommentBiz commentBiz;
+	
+	private int pageNum;
+	private int pageSize;
+	
+	public String list(){
+		List<Blog> blogList = blogBiz.searchByKeyword(pageNum, pageSize);
+		ActionContext.getContext().put("blogList", blogList);
+		ActionContext.getContext().put("pageCount", blogBiz.getPageCount(pageSize));
+		return "list";
+	}
+	
+	public String keyList(){
+		List<Blog> blogList = blogBiz.searchByKeyword(pageNum, pageSize, keyword);
+		ActionContext.getContext().put("blogList", blogList);
+		ActionContext.getContext().put("pageCount", blogBiz.getPageCount(pageSize, keyword));
+		ActionContext.getContext().getValueStack().push(keyword);
+		return "list";
+	}
+	
+	public String detail(){
+		Blog blogDetail = blogBiz.getBlogDetail(blog.getBlogId());
+		List<Comment> commentList = commentBiz.searchByBlogId(pageNum, pageSize, blog.getBlogId());
+		ActionContext.getContext().put("commentList", commentList);
+		ActionContext.getContext().getValueStack().push(blogDetail);
+		ActionContext.getContext().put("pageCount", commentBiz.commentCount(pageSize, ""));
+		return "detail";
+	}
+	
+	public String delete(){
+		blogBiz.delete(blog.getBlogId());
+		return "tolist";
+	}
+	
+	public String add(){
+		FileUtils.copyFile(this.getSavePath(), this.getImageFileName(), this.getImage());
+		blog.setBlogImage(this.savePath+"\\"+this.getImageFileName());
+		blog.setBlogTime(new Date());
+		blogBiz.add(blog);
+		return "tolist";
+	}
+
+	
+	/*===================setter  and  getter=================*/
+	public int getPageNum() {
+		return pageNum;
+	}
+
+	public void setPageNum(int pageNum) {
+		this.pageNum = pageNum;
+	}
+
+	public int getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+
+
+	public Blog getModel() {
+		return blog;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+
+	public File getImage() {
+		return image;
+	}
+
+	public void setImage(File image) {
+		this.image = image;
+	}
+
+	public String getImageContentType() {
+		return imageContentType;
+	}
+
+	public void setImageContentType(String imageContentType) {
+		this.imageContentType = imageContentType;
+	}
+
+	public String getImageFileName() {
+		return imageFileName;
+	}
+
+	public void setImageFileName(String imageFileName) {
+		int random = (int) (Math.random()*10000);
+		this.imageFileName = System.currentTimeMillis() + "" + random + imageFileName.substring(imageFileName.indexOf("."));
+	}
+
+	public String getSavePath() {
+		return ServletActionContext.getServletContext().getRealPath(savePath);
+	}
+
+	public void setSavePath(String savePath) {
+		this.savePath = savePath;
+	}
+	
+	
+	
+	
+
+}
